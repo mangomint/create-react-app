@@ -222,7 +222,7 @@ Create React App is open source software [licensed as MIT](https://github.com/fa
 ## Mangomint Notes
 
 To publish just our custom react-scripts package:
-
+- Login using `npm login` as a user who has publish permission in the @mangomint npm org (contact Dan P if you don't have a user/don't have this permission)
 - cd into the `packages/react-scripts` directory
 - make sure the version in `packages/react-scripts/package.json` is changed to the proper version
 - then run `npm publish`
