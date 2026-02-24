@@ -225,4 +225,4 @@ To publish just our custom react-scripts package:
 - Login using `npm login` as a user who has publish permission in the @mangomint npm org (contact Dan P if you don't have a user/don't have this permission)
 - cd into the `packages/react-scripts` directory
 - make sure the version in `packages/react-scripts/package.json` is changed to the proper version
-- then run `npm publish`
+- then run `npm publish --tag latest` (the `--tag latest` flag is required because npm refuses to publish prerelease versions without an explicit tag)
