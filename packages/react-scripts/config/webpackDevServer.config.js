@@ -89,6 +89,12 @@ module.exports = function (proxy, allowedHost) {
       overlay: {
         errors: true,
         warnings: false,
+        runtimeErrors: (error) => {
+          if (error?.message && /ResizeObserver loop/.test(error.message)) {
+            return false;
+          }
+          return true;
+        },
       },
     },
     devMiddleware: {
