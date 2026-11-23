@@ -772,6 +772,7 @@ module.exports = function (webpackEnv) {
         }),
       // TypeScript type checking
       useTypeScript &&
+        !(isEnvDevelopment && process.env.DISABLE_TYPECHECK === 'true') &&
         new ForkTsCheckerWebpackPlugin({
           async: isEnvDevelopment,
           typescript: {
